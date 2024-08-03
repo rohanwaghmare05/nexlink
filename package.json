@@ -25,3 +25,13 @@
   },
   "description": ""
 }
+
+{
+  "version": 35.2.3,
+  "builds": [
+    { "src": "app.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "app.js" }
+  ]
+}
