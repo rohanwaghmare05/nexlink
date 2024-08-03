@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+/* CSS for Header */
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.header-container .logo h1 a {
+  color: white; /* Set the color to white */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a.active {
+  color: yellow; /* Change color for active link */
+}
+
+/* CSS for Converter Section */
+.top-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#form {
+  display: inline-block;
+}
+
+#form h1 {
+  font-size: 24px;
+}
+
+#form h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#form input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#convert-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#convert-btn:hover {
+  background-color: #0056b3;
+}
+
+/* end of CSS for Header */
+
+/* CSS for Result Section */
+
+.bottom-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.success,
+.errors {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.success p,
+.errors p {
+  margin: 0;
+}
+
+.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.errors {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* end of CSS for Result Section */
+
+/* CSS for Search Button */
+
+#search-btn {
+  cursor: pointer;
+}
+
+.search-options {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.search-options ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-options ul li {
+  padding: 10px 20px;
+}
+
+.search-options ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* end of CSS for Search Button */
+
+
+/* CSS for Contact Us page */
+
+.contact-container {
+  max-width: 1165px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.contact-content {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 250px;
+}
+
+.contact-content h2 {
+  margin-top: 0;
+}
+
+.contact-content p {
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* end of CSS for Contact Us page */
+
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .search-options {
+      position: relative;
+  }
+  .search-options ul li {
+      padding: 10px;
+  }
+}
+
+@media(max-width:768px){
+  .bottom-container{
+    width: 90%;
+    margin: auto;
+  }
+
+  #form, .success{
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media(max-width:480px){
+  #form input{
+    width: 50%;
+  }
+}
+
+/* end of Responsive */
+
+
+/* Style for dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS for Header */
+
+/* Add this media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+
+
+/* end of Style for dropdown menu */
+
+
+/* text css */
+/* Header styling */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav ul li a.active {
+  color: #ff0000;
+}
+
+/* Main content styling */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#audioPlayer {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* text css */
+
+
+/* CSS for Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  z-index: 100; /* Ensure footer is above other content */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+  color: #ccc;
+}
+
+.footer-section p a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section p a:hover {
+  color: #fff; /* Change to white when hovered */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+/*  end of CSS for Footer */
+
+
+/* CSS for Conversion Section */
+/* CSS for Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.conversion-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.conversion-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.conversion-section ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.conversion-section ol li {
+  margin-bottom: 10px;
+}
+
+/* ens of CSS for Conversion Section */
+
+
+/* 2nd sections */
+
+.section {
+  max-width: 1165px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #000000;
+}
+
+.section h3 {
+  color: #000000;
+}
+
+.section p {
+  color: #000000;
+  line-height: 1.5;
+}
+
+.section strong {
+  color: #333;
+}
+/* End of 2nd sections */
+
+
+/* 3nd sections */
+
+/* CSS for section1 */
+.section1 {
+  max-width: 1165px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 250px; /* Adjust this value to match the height of your footer */
+}
+
+.section1 h2 {
+  color: #000000;
+}
+
+.section1 ol {
+  margin-left: 20px;
+}
+
+.section1 ol li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+/* End of section1 CSS */
+
+/* End of 3nd sections */
+
+
+/* about */
+
+/* style.css */
+
+.about-container {
+  max-width: 1165px;
+  margin: 20px auto;
+}
+
+.section-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  text-align: center;
+  color: #000000;
+}
+
+.section-box p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.section-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.section-box ul li {
+  margin-bottom: 5px;
+}
+
+/* end of about */
+
+
+/* CSS for yt.ejs page */
+.top-bottom {
+  max-width: 1165px;
+  margin: 90px auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* End of CSS for yt.ejs page */
+
+
+/* text.ejs */
+
+/* CSS for text.ejs */
+
+/* Header styling */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav ul li a.active {
+  color: #ff0000;
+}
+/* End of Header styling */
+
+/* Main content styling */
+#convertBtn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#convertBtn:hover {
+  background-color: #0056b3;
+}
+/* End of Main content styling */
+
+/* Footer styling */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  z-index: 100; /* Ensure footer is above other content */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  margin: 0;
+  color: #ccc;
+}
+
+.footer-section p a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section p a:hover {
+  color: #fff; /* Change to white when hovered */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+/* End of Footer styling */

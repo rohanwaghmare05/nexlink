@@ -1,0 +1,93 @@
+<!-- converter.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Converter - NexLink</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="/index">NexLink</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index" class="active">Home</a></li>
+                    <!-- Add a dropdown container for Converter -->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Converter <i class="fa fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <!-- Change the href to point to /yt instead of /converter -->
+                            <a href="/yt">MP4 to MP3 Converter</a>
+                            <a href="/text">Text to Speech Converter</a>
+                        </div>
+                    </li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <div class="top-container">
+        <form action="/convert-mp3" method="POST" id="form">
+            <h1><i class="fa-brands fa-youtube"></i> From YouTube to MP3</h1>
+            <h4>Enter the Video ID</h4>
+            <div>
+                <input type="text" name="videoID" placeholder="Video ID"><button id="convert-btn">Convert</button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="bottom-container">
+        <% if(typeof success != "undefined" && success) { %>
+        <div class="success">
+            <p><%= song_title %></p>
+            <a href="<%= song_link %>"><button id="download-btn">DOWNLOAD</button></a>
+        </div>
+        <% } else if(typeof success != "undefined" && !success) { %>
+        <div class="errors">
+            <p><%= message %></p>
+        </div>
+        <% } %>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:nexlinkatyourhelp@gmail.com">nexlinkatyourhelp@gmail.com</a></p>
+                <p>Phone: +91 7218015185</p>
+            </div>
+            <div class="footer-section">
+                <h3>Converters</h3>
+                <ul>
+                    <li><a href="/yt">MP4 to MP3 Converter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+</body>
+
+</html>
